@@ -31,6 +31,10 @@
                                     </fragment>
                                 </attributedString>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputNum:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="S54-z4-r0f"/>
+                                    <action selector="inputNum:" destination="BYZ-38-t0r" eventType="touchDown" id="tf5-Av-hJ5"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0s-9z-MHr">
                                 <rect key="frame" x="57" y="431" width="300" height="100"/>
@@ -53,6 +57,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tac-v6-8F6"/>
                                     <action selector="touchdigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EAw-ZQ-Nar"/>
                                 </connections>
                             </button>
@@ -61,8 +66,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="convertValue" destination="K0s-9z-MHr" id="nde-cC-AHk"/>
                         <outlet property="display" destination="K0s-9z-MHr" id="m8Z-3n-JfL"/>
-                        <outlet property="inputNum" destination="ap0-rL-xfn" id="Elj-zn-H5s"/>
+                        <outlet property="inputNum" destination="ap0-rL-xfn" id="yaG-pU-Ich"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

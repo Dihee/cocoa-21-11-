@@ -21,24 +21,13 @@ if var fromInch = Int(inputNum ?? 0) {
 */
 
 class ViewController: UIViewController {
-    
-    @IBOutlet weak var inputNum: UITextField!
-    
-    // 프로퍼티 생성
-    @IBOutlet weak var display: UILabel!
-    
-    @IBAction func touchdigit(_ sender: UIButton) {
-        var digit = sender.currentTitle
-        let convertValue = display!.text!
-        display!.text = convertValue + digit
-    }
-    
-    
 
+    @IBOutlet weak var inputNum: UITextField!
+    @IBOutlet weak var convertValue: UILabel!
     
-    
-    
-    
+    @IBAction func pressedButton(_ sender: UIButton) {
+        
+    }
     
     /*    // override는 상속되는 슈퍼클래스의 메서드나 프로퍼티를 내가 마음대로 바꿀 수 있게 함
     // viewDidLoad() 이 함수가 호출되어졌을때 딱 한 번만 호출되어지는 함수
