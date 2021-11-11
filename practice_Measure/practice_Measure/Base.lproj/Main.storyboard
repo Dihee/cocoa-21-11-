@@ -16,59 +16,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="bezel" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="ap0-rL-xfn">
-                                <rect key="frame" x="59" y="300" width="210" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Iu0-QH-YfT"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="ff">
-                                        <attributes>
-                                            <color key="NSColor" red="0.96421955541237114" green="0.96421955541237114" blue="0.96421955541237114" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" metaFont="cellTitle"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="inputNum:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="S54-z4-r0f"/>
-                                    <action selector="inputNum:" destination="BYZ-38-t0r" eventType="touchDown" id="tf5-Av-hJ5"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0s-9z-MHr">
-                                <rect key="frame" x="57" y="431" width="300" height="100"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cA8-Hf-rCr">
+                                <rect key="frame" x="107" y="318" width="225" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXV-Y0-py5">
+                                <rect key="frame" x="174" y="411" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="convertBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E7J-nM-orf"/>
+                                    <action selector="convertButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E85-xH-plz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKL-wh-Rqt">
+                                <rect key="frame" x="145" y="509" width="146" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxY-Oc-lwa">
-                                <rect key="frame" x="277" y="300" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="변환">
-                                            <attributes>
-                                                <font key="NSFont" size="19" name="AppleSDGothicNeo-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tac-v6-8F6"/>
-                                    <action selector="touchdigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EAw-ZQ-Nar"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="convertValue" destination="K0s-9z-MHr" id="nde-cC-AHk"/>
-                        <outlet property="display" destination="K0s-9z-MHr" id="m8Z-3n-JfL"/>
-                        <outlet property="inputNum" destination="ap0-rL-xfn" id="yaG-pU-Ich"/>
+                        <outlet property="convertValue" destination="xKL-wh-Rqt" id="E3e-3r-b7o"/>
+                        <outlet property="inputNum" destination="cA8-Hf-rCr" id="f6G-SS-EDC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
