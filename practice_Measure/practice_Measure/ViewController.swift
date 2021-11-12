@@ -4,57 +4,29 @@
  //
  //  Created by Jihee hwang on 2021/11/10.
  //
-/*
+
 import UIKit
 
-class ViewController: UIViewController {
+// jeje의 도움을 받아 다시 도전!
 
+class ViewController: UIViewController {
 
     @IBOutlet weak var inputNum: UITextField!
     @IBOutlet weak var convertValue: UILabel!
     
-    func numValue(inputNum: Float) -> Any {
-        return inputNum * 2.54
-    
-    @IBAction func convertNum(_ sender: UIButton) {
-        convertValue.text =
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
+    
+    
+    @IBAction func didButton(_ sender: UIButton) {
+        let inches = self.inputNum.text!
+        let inputInches = Float(inches)!
+        self.convertValue.text = String(inputInches * 2.54)
         
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
+    
+    // 됐다......!
+    
     
 }
-*/
-
-import UIKit
-
-class ViewController: UIViewController {
-    
-    struct convertNumber {
-        var toCM = Float()
-        init(from inch: Float) {
-            toCM = inch * 2.54
-        }
-        func printValue() -> Float {
-            return toCM
-        }
-    }
-    
-    @IBOutlet weak var inputNum: UITextField!
-    @IBOutlet weak var convertValue: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    @IBAction func convertBtn(_ sender: UIButton) {
-        var num = Float(inputNum.text!)
-       
-    }
-    
-
-}
-
-// jeje 덕분에 다시 시작해볼수있게되었다ㅠㅠ
-
