@@ -54,4 +54,16 @@ struct ArrayPractice {
 
 
 // Eddy가 말한 것 처럼, 이중 for문으로 다시 만들어보자!
+// 시도 4.
 
+func printNumbers(lines: Int) {
+    var num = Int()
+    for i in 1...lines { // 행을 만듬
+        for _ in 1...i { // 열을 만듬
+            num += 1     // 빈 변수에 값을 1씩 더해 넣음
+            print(num, terminator: "")
+        }
+        print()
+    }
+}
+printNumbers(lines: 5)
