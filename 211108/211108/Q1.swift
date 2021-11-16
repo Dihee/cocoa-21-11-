@@ -56,42 +56,88 @@ var myArray = printArray */
 // Eddy가 말한 것 처럼, 이중 for문으로 다시 만들어보자!
 // 시도 4.
 
-
-//func printNumbers(lines: Int) {
-//    var num = Int()
-//    for i in 1...lines { // 행을 만듬
-//        for _ in 1...i { // 열을 만듬
-//            num += 1     // 빈 변수에 값을 1씩 더해 넣음
-//            print(num, terminator: "")
-//        }
-//        print()
-//    }
-//}
-//printNumbers(lines: 5)
-//
-
 struct ArrayPractice {
+    var resultArray: [[Int]] = Array(repeating: Array(repeating: 0, count: 0), count: 5)
+    // 위 배열을 빈 배열로 선언할 수 없는 이유는?
+    // for 문에서 i가 0…lines 라는 인덱스를 사용해서
+    // i가 인덱스로서 resultArray에 접근하고 있는데 스위프트에서는 배열의 크기를 미리 지정해줘야 인덱스를 사용할 수 있다.
+    
+    var lines = 4
+    
+    mutating func fillArray() -> [[Int]] {
+        var num = Int()
 
-    func fillArray() -> [[Int]] {
-        let lines = 5 // 숫자가 달라지면, 배열의 크기도 달라지도록
-        var resultArr = [[Int]]() // 결과 값을 담을 2차원 배열 선언
-        var num = Int() // 값이 들어 갈 프로퍼티 선언
-        
-        for row in 1...lines {
-            var tempArray = [Int]() // 열의 값을 저장 할 배열 선언
-            for col in 1...row {
-                num += 1 // 하나씩 더하겠다.
-                tempArray.append(num) // 열의 값이 들어갈 변수에 넣어주겠다.
+        for i in 0...lines { // 행 생성
+            for j in 0...lines { // 열 생성
+                num += 1
+                if i < j {
+                    continue
+                }
+                resultArray[i].append(num)
             }
-        resultArr.append(tempArray)
         }
-        num += 5
+        return resultArray
     }
     
     func printArray(array: [[Int]]) {
-        for innerArray in array {
-                 print(innerArray)
+        for i in 0...lines {
+            print(array[i])
         }
     }
-    return resultArr
+}
+
+
+
+
+// 1-2
+
+//// 일단 함수로 구현해보기
+//func makeArr(line: Int) {
+//    let line = 7
+//
+//    for i in stride(from: line - 1, to: 0, by: -1) {
+//        for j in 1...(line - 1) {
+//            if i <= j {
+//                print("t", terminator: "")
+//            } else {
+//                print("f", terminator: "")
+//            }
+//        }
+//        print()
+//    }
+//    print()
+//    }
+
+// 미션 코드에 대입
+struct MakeArr {
+    var lines: Int = 7
+
+    func setBoolArray() -> [[Bool]] {
+        var resultArray: [[Bool]] = Array(repeating: Array(repeating: false, count: lines), count: lines)
+        
+        for i in 0..<lines {
+            for j in 0..<lines {
+                if (i + j) >= (lines - 1) {
+                    resultArray[i][j] = true
+                }
+            }
+        }
+        return resultArray
+    }
+    
+    func prinsArray(array: [[Bool]], newChar: Character) {
+        let lines = array.count
+        
+        for i in 0..<lines {
+            for j in 0..<array[i].count {
+                if array[i][j] == true {
+                    print(newChar, terminator: "")
+                } else {
+                    print(" ", terminator: "")
+                }
+            }
+            print()
+        }
+    }
+
 }
