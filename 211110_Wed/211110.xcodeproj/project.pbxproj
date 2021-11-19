@@ -25,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		730D544427467D5C00D0E991 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		735DD1312743E1FB00545B67 /* 211110 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 211110; sourceTree = BUILT_PRODUCTS_DIR; };
 		735DD1342743E1FB00545B67 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		735DD13B2743E20300545B67 /* Q1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q1.swift; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 				735DD1342743E1FB00545B67 /* main.swift */,
 				735DD13B2743E20300545B67 /* Q1.swift */,
 				735DD13D2743F56C00545B67 /* Q2.swift */,
+				730D544427467D5C00D0E991 /* MyPlayground.playground */,
 			);
 			path = 211110;
 			sourceTree = "<group>";

@@ -5,6 +5,7 @@
 //
 
 import Foundation
+// 비밀번호 문제 힌트 : characterSet
 
 
 // Q 1-1. 첫번째 실행
@@ -15,10 +16,6 @@ import Foundation
 var myArray = ArrayPractice()
 myArray.printArray(array: myArray.fillArray())
 
-// 비밀번호 문제 힌트 : characterSet
-//makeArr(line: 7)
-
 // Q 1-2.
-var myArr = MakeArr()
-myArr.prinsArray(array: myArr.setBoolArray(), newChar: "$")
-
+var myArray2 = BoolArray()
+myArray2.printArray(array: myArray2.setBoolArray(), newChar: "$")

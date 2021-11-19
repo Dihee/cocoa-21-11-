@@ -108,36 +108,37 @@ struct ArrayPractice {
 //    print()
 //    }
 
-// 미션 코드에 대입
-struct MakeArr {
-    var lines: Int = 7
 
-    func setBoolArray() -> [[Bool]] {
-        var resultArray: [[Bool]] = Array(repeating: Array(repeating: false, count: lines), count: lines)
-        
-        for i in 0..<lines {
-            for j in 0..<lines {
-                if (i + j) >= (lines - 1) {
-                    resultArray[i][j] = true
-                }
-            }
-        }
-        return resultArray
-    }
+struct BoolArray {
     
-    func prinsArray(array: [[Bool]], newChar: Character) {
-        let lines = array.count
+    var lines = 7
+    var arr = [[Bool]]()
+    
+    mutating func setBoolArray() -> [[Bool]] {
+        for i in 1...lines {
+            var tempArr = [Bool]()
+                for j in i..<lines {
+                    tempArr.append(false)
+                }
+                for _ in 1...i {
+                    tempArr.append(true)
+                }
+    
+            arr.append(tempArr)
+        }
+        return arr
+    }
         
-        for i in 0..<lines {
-            for j in 0..<array[i].count {
-                if array[i][j] == true {
+    func printArray(array: [[Bool]], newChar: Character) {
+        for innerArray in array {
+            for bool in innerArray {
+                if bool == true {
                     print(newChar, terminator: "")
                 } else {
                     print(" ", terminator: "")
                 }
             }
-            print()
+            print("")
         }
     }
-
 }

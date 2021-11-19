@@ -8,11 +8,12 @@
 import Foundation
 
 var myInterestRate = InterestRate()
-myInterestRate.testInterest(unitDay: 67)
+myInterestRate.testInterest(unitDay: 365) 
 
 //var myArr = MakeArr()
 //myArr.printArr(array: myArr.arr)
 
-var playBaseballGame = PlayTheGame()
-playBaseballGame.showGameScore()
-
+//var playBaseballGame = PlayTheGame()
+//playBaseballGame.showGameScore()
+//
+baseBall.newgame()

@@ -8,7 +8,7 @@
 import Foundation
 
 // 연습문제2. 아이디 규칙 검사
-
-func IDValidator(password: String) -> Bool {
-    if 
-}
+//
+//func IDValidator(password: String) -> Bool {
+//    
+//}
