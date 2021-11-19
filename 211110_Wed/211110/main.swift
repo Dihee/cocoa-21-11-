@@ -13,7 +13,7 @@ myInterestRate.testInterest(unitDay: 365)
 //var myArr = MakeArr()
 //myArr.printArr(array: myArr.arr)
 
-//var playBaseballGame = PlayTheGame()
-//playBaseballGame.showGameScore()
-//
-baseBall.newgame()
+var playBaseballGame = PlayGame()
+playBaseballGame.newGame()
+playBaseballGame.showGameScore()
+

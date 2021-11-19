@@ -84,16 +84,46 @@ printNumbers(lines: 5)
 
 // 미션6. printSquare()
 
-//func printSquare(columns: Int) {
-//    var num = Int()
-//
-//    for i in 1...columns {
-//        for _ in 1...columns {
-//            num += 1
-//            print(num, terminator: "")
-//        }
-//        print()
-//    }
-//}
-//printSquare(columns: 5)
-// 출력은 됐으나, 이게 아닌듯 하당
+func printSquare(columns: Int) {
+    let resultArr = columns * columns // 정사각형 선언
+    
+    for i in 1...resultArr {
+        if i < 10 {
+            print(" \(i)", terminator: "")
+        } else {
+            print(i, terminator: "")
+        }
+        if i % columns == 0 {
+            print("")
+        } else {
+            print(" ", terminator: "")
+        }
+    }
+}
+printSquare(columns: 5)
+
+
+// 미션7. printReverse()
+
+// 미션8. printDiamond()
+
+// 미션9. print3515()
+
+func print3515(lines: Int) -> [String] {
+    var arr = [String]()
+    
+    for i in 1...lines {
+        if i % 3 == 0 {
+            arr.append("👏🏼")
+        } else if i % 5 == 0 {
+            arr.append("🙏")
+        } else if i % 15 == 0 {
+            arr.append("👏🏼🙏")
+        } else {
+            arr.append(String(i))
+        }
+    }
+    return arr
+}
+
+print3515(lines: 15)
