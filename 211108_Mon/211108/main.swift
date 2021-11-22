@@ -5,8 +5,6 @@
 //
 
 import Foundation
-// 비밀번호 문제 힌트 : characterSet
-
 
 // Q 1-1. 첫번째 실행
 //var myArray = ArrayPractice()
@@ -19,3 +17,6 @@ myArray.printArray(array: myArray.fillArray())
 // Q 1-2.
 var myArray2 = BoolArray()
 myArray2.printArray(array: myArray2.setBoolArray(), newChar: "$")
+
+//IDValidator(password: "12345")
+duplicatedWords(inputWords: ["가을", "우주", "너굴", "우주", "겨울", "봄봄", "너굴", "너굴"])

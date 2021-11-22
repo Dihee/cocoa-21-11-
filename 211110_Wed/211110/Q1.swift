@@ -7,6 +7,7 @@
 
 import Foundation
 
+// 1-1
 struct InterestRate {
 
     func getInterestRate(byDay:Int) -> Double {
@@ -45,7 +46,7 @@ struct PlayGame {
     var number = [Int]() // 뽑은 숫자 3개를 받을 빈 배열 선언
 
     mutating func newGame(){
-        while number.count < 3 {  // num 배열에 숫자 3개가 들어갈때까지 반복하겠다.
+        while number.count < 3 {  // num 배열에 숫자 3개가 들어가있지 않다면, 아래를 동작
             let tempNum = Int.random(in: 1...9) // 1~9중에 숫자 3개를 받을 변수 선언
             
             // contains(포함여부확인할 배열/문자열)은 배열이나 문자열에 해당 특정 문자가 포함되어있는지 확인후 Bool값 리턴

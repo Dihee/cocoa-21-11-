@@ -8,8 +8,7 @@
 import Foundation
 
 
-/* 연습문제1 - 배열
- 미션1. 2차원 배열만들기 & 출력하기 */
+/* 1-1 2차원 배열만들기 & 출력하기 */
 
 // 시도 1.
 
@@ -89,7 +88,7 @@ struct ArrayPractice {
 
 
 
-// 1-2
+// 1-2 setBoolArray와 printArray
 
 //// 일단 함수로 구현해보기
 //func makeArr(line: Int) {
@@ -142,3 +141,5 @@ struct BoolArray {
         }
     }
 }
+
+// 1-3 마방진
