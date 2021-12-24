@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         addToWorkings(value: "+")
     }
     @IBAction func point(_ sender: UIButton) {
-        addToWorkings(value: "/")
+        addToWorkings(value: ".")
     }
     @IBAction func zero(_ sender: UIButton) {
         addToWorkings(value: "0")

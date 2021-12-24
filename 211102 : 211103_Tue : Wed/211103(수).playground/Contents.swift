@@ -113,12 +113,12 @@ func print3515(lines: Int) -> [String] {
     var arr = [String]()
     
     for i in 1...lines {
-        if i % 3 == 0 {
-            arr.append("👏🏼")
+        if i % 15 == 0 {
+            arr.append("👏🏼🙏")
         } else if i % 5 == 0 {
             arr.append("🙏")
-        } else if i % 15 == 0 {
-            arr.append("👏🏼🙏")
+        } else if i % 3 == 0 {
+            arr.append("👏🏼")
         } else {
             arr.append(String(i))
         }
@@ -127,3 +127,5 @@ func print3515(lines: Int) -> [String] {
 }
 
 print3515(lines: 15)
+
+

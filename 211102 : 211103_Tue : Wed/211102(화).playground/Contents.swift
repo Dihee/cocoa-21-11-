@@ -130,11 +130,9 @@ struct MyPoint {
         myY = y
     }
 
-    mutating func getDistanceTo(toPoint: MyPoint) -> Float {
-        let distanceX: Float = pointA.myX - pointB.myX
-        let distanceY: Float = pointA.myY - pointB.myY
-        return sqrt(distanceX * distanceX + distanceY * distanceY)
-    }
+    func getDistanceTo(toPoint: MyPoint) -> Float {
+           return sqrt(pow(myX - toPoint.myX, 2) + pow(myY - toPoint.myY, 2))
+       }
 
 }
 
@@ -144,7 +142,9 @@ pointA.printPoint()
 pointA.setX(x: 15.2)
 pointA.setY(y: 7.4)
 pointA.printSetXY()
-//getDistanceTo(toPoint: pointB) //출력문제 보류
+print(pointA.getDistanceTo(toPoint: pointB))
+
+//출력문제 보류
 
 // 연습문제3
 
